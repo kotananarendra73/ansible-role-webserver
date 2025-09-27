@@ -1,21 +1,16 @@
 # SPDX-License-Identifier: MIT
 galaxy_info:
-  role_name: webserver            # lowercase; matches your repo "ansible-role-webserver"
+  role_name: webserver
   author: Narendra Kumar
   description: Sample role to configure a web server
   license: MIT
   min_ansible_version: "2.12"
   platforms:
     - name: EL
-      versions:
-        - "8"
-        - "9"
+      versions: ["8", "9"]
     - name: Ubuntu
       versions:
-        - "20.04"
-        - "22.04"
-  galaxy_tags:
-    - web
-    - server
-    - httpd
+        - focal
+        - jammy
+  galaxy_tags: [web, server, httpd]
 dependencies: []
