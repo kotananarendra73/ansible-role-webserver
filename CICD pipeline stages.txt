@@ -1,0 +1,15 @@
+we are using multibranch pipelines, we have shared libraries to support our pipelines , our's is declarative scripting. we have 
+stage(checkout)- where we pull code from scm (git clone)
+stage(build)- In this stage we build the code using maven ( mvn clean package)
+stage(sonar)- we do static code analysis and unit test coverage in this stage (mvn sonar:sonar ) (cobertura or jacoco for unit test coverage)
+stage(publish) - once quality gates are passed , we publish the artifact to Nexus repo. if branch is dev, we pupblish snapshot artficact , if branch is release we publish release artifact. (mvn deploy) 
+stage(docker)  -  In this stage , we create a application image and publish this image to AWS ECR.
+
+
+
+
+
+
+
+
+
